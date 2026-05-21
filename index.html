@@ -1,0 +1,210 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music & Film - Cartoon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Mengatur font dan latar belakang seluruh halaman */
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #45b6fe;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        /* Bingkai utama bergaya komik/kartun */
+        .wadah-utama {
+            background-color: #fffacd;
+            border: 5px solid #000;
+            border-radius: 20px;
+            box-shadow: 10px 10px 0px #000;
+            width: 100%;
+            max-width: 750px;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff4500;
+            text-shadow: 2px 2px 0px #000;
+            font-size: 36px;
+            letter-spacing: 2px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 4px dashed #000;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Efek interaktif (melompat saat disentuh kursor) */
+        .efek-interaktif {
+            transition: all 0.2s ease-in-out;
+        }
+        .efek-interaktif:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 15px 15px 0px #000;
+            cursor: pointer;
+        }
+
+        /* --- BAGIAN FOTO DAN BIO --- */
+        .bagian-profil {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .foto-profil {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border: 4px solid #000;
+            border-radius: 15px;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .kotak-bio {
+            flex: 1;
+            background-color: #ffb6c1;
+            padding: 20px;
+            border: 4px solid #000;
+            border-radius: 15px;
+            box-shadow: 6px 6px 0px #000;
+            font-size: 18px;
+        }
+
+        /* --- BAGIAN WADAH MEDIA --- */
+        .bagian-media {
+            margin-bottom: 40px;
+            background-color: #98fb98;
+            padding: 20px;
+            border: 4px solid #000;
+            border-radius: 15px;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .deretan-kotak {
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* --- DESAIN BARU UNTUK KOTAK MUSIK LOKAL --- */
+        .kartu-musik {
+            flex: 1;
+            min-width: 140px;
+            background-color: #fff; /* Latar belakang putih agar bersih */
+            border: 4px solid #000;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px #000;
+            display: flex;
+            flex-direction: column; /* Menyusun isi kotak dari atas ke bawah */
+            align-items: center;
+            justify-content: center;
+            padding: 15px 10px;
+        }
+
+        .kartu-musik span {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .kartu-musik p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Menyesuaikan lebar pemutar audio agar pas di dalam kotak */
+        .kartu-musik audio {
+            width: 100%;
+            height: 35px;
+        }
+
+        /* --- DESAIN UNTUK VIDEO YOUTUBE (TETAP SAMA) --- */
+        .kartu-youtube {
+            flex: 1;
+            min-width: 130px;
+            aspect-ratio: 1 / 1;
+            border: 4px solid #000;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px #000;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wadah-utama">
+        <h1>My Music & Film</h1>
+
+        <div class="bagian-profil">
+            <img src="gege.jpg" alt="Foto Saya" class="foto-profil efek-interaktif">
+            
+            <div class="kotak-bio efek-interaktif">
+                <h2>Biodata</h2>
+                <p><strong>Nama:</strong> Dandy Ahmad</p>
+                <p><strong>Umur:</strong> adalah pokoknya</p>
+                <p><strong>Hobi:</strong> Nonton film dan mendengarkan musik</p>
+            </div>
+        </div>
+
+        <div class="bagian-media efek-interaktif">
+            <h2>My Favorit Music</h2>
+            <div class="deretan-kotak">
+                
+                <div class="kartu-musik efek-interaktif">
+                    <p>Shape of My Heart</p>
+                    <audio controls>
+                        <source src="shape.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="kartu-musik efek-interaktif">
+                    <p>Fate of Ophelia</p>
+                    <audio controls>
+                        <source src="ophelia.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="kartu-musik efek-interaktif">
+                    <p>Jadi Kekasih ku Saja</p>
+                    <audio controls>
+                        <source src="kekasih.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="kartu-musik efek-interaktif">
+                    <p>One in a Million</p>
+                    <audio controls>
+                        <source src="one.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bagian-media efek-interaktif">
+            <h2>My Favorit Film</h2>
+            <div class="deretan-kotak">
+                <iframe class="kartu-youtube efek-interaktif" src="https://www.youtube.com/embed/otL78_pk_A0" title="Ghost in the Cell" frameborder="0" allowfullscreen></iframe>
+                <iframe class="kartu-youtube efek-interaktif" src="https://youtube.com/embed/OBbE4wK47ts" title="Pengepungan di Bukit Duri" frameborder="0" allowfullscreen></iframe>
+                <iframe class="kartu-youtube efek-interaktif" src="https://youtube.com/embed/BjkIOU5PhyQ" title="Film 3" frameborder="0" allowfullscreen></iframe>
+                <iframe class="kartu-youtube efek-interaktif" src="https://youtube.com/embed/8TZMtslA3UY" title="Film 4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
